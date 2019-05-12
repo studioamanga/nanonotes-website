@@ -1,0 +1,65 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}
+    %title Nano Notes for iPhone and iPad
+    %link{:rel => "stylesheet", :href => "style.css?re", :type => "text/css"}
+    %link{:rel => "canonical", :href => "https://www.studioamanga.com/nanonotes/"}
+    %link{:rel => "shortcut icon", :href => "http://www.studioamanga.com/img/favicon.ico"}
+    %link{:rel => "apple-touch-icon-precomposed", :href => "../img/touch-icon-iphone4.png"}
+    %link{:rel => "apple-touch-icon-precomposed", :href => "../img/touch-icon-ipad.png", :sizes => "72x72"}
+    %meta{:name => "description", :content => "Take quick notes, and read them on your Apple Watch!"}
+    %meta{:name => "viewport", :content => "width=device-width"}
+    %meta{:name => "apple-itunes-app", :content => "app-id=1445942906"}
+  %body
+    %nav.general
+      %ul
+        %li
+          %a{:href => "http://www.studioamanga.com/"}
+            %img{:alt => "StdAMG", :src => "img/icon-amg.png"}
+            %span Studio AMANgA
+        %li
+          %a{:href => "http://www.studioamanga.com/gameskeeper/"}
+            %img{:alt => "Games Keeper", :src => "img/icon-gameskeeper.png"}
+            %span Games Keeper
+        %li
+          %a{:href => "http://www.studioamanga.com/onelist/"}
+            %img{:alt => "1List", :src => "img/icon-onelist.png"}
+            %span 1List
+        %li
+          %a{:href => "http://www.studioamanga.com/comicbookday/"}
+            %img{:alt => "Comic Book Day", :src => "img/icon-comicbookday.png"}
+            %span Comic Book Day
+
+    %header.top.cropped-bottom
+      %div.title
+        %img.icon{:alt => "Icon", :src => "img/icon-72-2x.png"}
+        %h1 Nano Notes
+      %div
+        %img.showcase{:alt => "Screens", :src => "img/screens.png"}
+
+    %section.main
+      %div.tagline
+        Take quick notes, and read them on your Apple Watch!
+
+      %p.download
+        %a{:href => "https://itunes.apple.com/app/id1445942906?mt=8"}
+          %img{:alt => "Download on the App Store", :src => "img/download-appstore.svg"}/
+
+    %footer
+      %a{:href => "http://www.studioamanga.com"}
+        %img{:alt => "StdAMG", :src => "img/amgmini-black.png"}/
+      %p
+        “Nano Notes” for iPhone, iPad, iPod touch, and Apple Watch
+        %br
+        Made by Studio AMANgA 2019
+
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-18279263-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
