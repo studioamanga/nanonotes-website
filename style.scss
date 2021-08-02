@@ -1,3 +1,203 @@
-$main-color: #101010;
+$main-color: #479EFC;
+$max-width: 800px;
 
-@import '../onelist/common';
+$margin-default: 20px;
+$margin-big: 40px;
+
+:root {
+  color-scheme: light dark;
+
+  --background-color: white;
+  --text-color: black;
+}
+
+body {
+  font-family: system-ui, -apple-system, Arial, sans-serif;
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  text-align: center;
+}
+
+nav.general {
+  height: 30px;
+  background-color: black;
+
+  a {
+    display: inline-block;
+    padding: 0 10px 0 10px;
+    height: 30px;
+    color: white;
+    text-decoration: none;
+  
+    img {
+      margin-right: 6px;
+      height: 22px;
+      position: relative;
+      top: 4px;
+    }
+
+    span {
+      position: relative;
+      top: -1px;
+    }
+
+    &:HOVER {
+      background-color: #333;
+    }
+  }
+}
+
+header {
+  display: block;
+  padding-bottom: $margin-default;
+  margin-bottom: $margin-big;
+  text-align:center;
+  background-color: $main-color;
+  color: white;
+
+  &.cropped-bottom {
+    padding-bottom: 0;
+    overflow: hidden;
+
+    .showcase {
+      margin-bottom: -6px;
+    }
+  }
+
+  .title {
+    padding: $margin-big 0;
+
+    .icon,
+    h1 {
+      display: inline-block;
+      margin: 0px;
+      padding: 0px;
+      vertical-align: top;
+      font-weight: normal;
+    }
+
+    .icon {
+      border-radius: 18px;
+      height: 72px;
+    }
+    
+    h1 {
+      padding-left: 10px;
+      position: relative;
+      top: 2px;
+      font-size: 4em;
+    }
+  }
+
+  .showcase {
+	height: 500px;
+    margin-bottom: $margin-default;
+  }
+}
+
+section.main {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 $margin-default $margin-default $margin-default;
+  text-align: left;
+  line-height: 1.5em;
+  font-size: 1.6em;
+
+  .tagline {
+    font-weight: bold;
+  }
+
+  blockquote {
+    text-align: left;
+    margin-left: 0;
+    margin-bottom: $margin-default;
+
+    q {
+      font-style: italic;
+    }
+  }
+
+  .download {
+    text-align: center;
+
+    img {
+      width: 225px;
+      height: 66px;
+    }
+  }
+
+  a {
+    color: var(--text-color);
+  }
+}
+
+.screenshots {
+  margin: $margin-default 0;
+
+  img {
+    width: 260px;
+    margin: 10px;
+  }
+}
+
+footer {
+  display: inline-block;
+  margin: $margin-big auto $margin-big auto;
+  padding: 0 $margin-default;
+  color: #888;
+  text-align: left;
+  font-size: 0.8em;
+  line-height: 1.8em;
+  
+  p {
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  a {
+    color: #888;
+    text-decoration: none;
+    
+    img {
+      margin-right: 10px;
+      opacity: 0.35;
+      width: 50px;
+      text-decoration: none;
+    }
+
+    &:HOVER {
+      color: #444;
+      
+      img {
+        opacity: 0.6;
+      }
+    }
+  }
+  
+  img,
+  p {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0px;
+  } 
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: black;
+    --text-color: white;
+  }
+
+  footer {
+    img {
+      -webkit-filter: invert(1);
+      filter: invert(1);
+    }
+
+    a:HOVER {
+      color: #bbb;
+    }
+  }
+}
