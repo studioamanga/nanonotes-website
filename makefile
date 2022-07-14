@@ -3,6 +3,7 @@ all:
 	sass style.scss:style.css
 	git -C ~/Developer/NanoNotes/ pull
 	cp ~/Developer/NanoNotes/releasenotes.html .
+	cp ~/Developer/NanoNotes/releasenotes.json .
 	open .
 	open /Applications/Cyberduck.app
 
